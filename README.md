@@ -1,0 +1,2 @@
+# pythonLab
+Laboratorium z pythona
