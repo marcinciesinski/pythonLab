@@ -6,12 +6,9 @@ def euklidesMod(a, b):
   else:
     return euklidesMod(b, a % b)
 
-def euklides2(*args):
-  return reduce(euklidesMod, args)
+def is_prime(num):
+  for j in range(2, int(math.sqrt(num)) +1):
+    if(num % j) ==0:
+      return False
+  return True
 
-
-print euklides2(9, 6, 12, 99, 30)
-
-print reduce(lambda x,y: x+y,[1,2,3])
-
-print map(lambda x: x+1, [1])
