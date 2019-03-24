@@ -12,6 +12,6 @@ def scalar(w1, w2):
 
 #print [w1[i] for i in range(len(w1)) if w1[i] % 2 == 0]
 #print [w1[i] + w2[i] for i in range(len(w1)) if w1[i] % 2 == 0]
-#print map((lambda x, y: x+y), w1, w2)
+print map((lambda x, y: x+y), w1, w2)
 
-print reduce((lambda x,y: x+y), map((lambda x,y: x*y), w1, w2))
+#print reduce((lambda x,y: x+y), map((lambda x,y: x*y), w1, w2))
