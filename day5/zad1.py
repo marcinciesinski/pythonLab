@@ -32,5 +32,6 @@ y = SlowSum({2:'b'})
 
 print x.dodaj(y)
 
-asd = ListSum([5,6,7])
-print asd.dodaj([7,8,9])
+# nie zadziała bo nie zgadza sie typ
+# asd = ListSum([5,6,7])
+# print asd.dodaj([7,8,9])
