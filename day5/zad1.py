@@ -1,18 +1,36 @@
 
 
 class Sum:
-  def dodaj(self, x, y):
+  def dodaj(self, x):
+    self.pole = 1
     print "brak implementacji"
+  def __str__(self):
+    return str(self.pole)
 
-class ListSum:
-  def dodaj(self, *x, *y):
-    print self.x + self.y
+class ListSum(Sum):
+  def __init__(self, l=[]):
+    self.pole = l
+  def dodaj(self, x):
+    self.pole += x.pole
+    return self
 
-class SlowSum:
-  def dodaj(self, **x, **y):
-    new = self.x.values() + self.y.values()
-    print new
+class SlowSum(Sum):
+  def __init__(self, l={}):
+    self.pole = l
+  def dodaj(self, x):
+    self.pole.update(x.pole)
+    return self
 
 
-a = Sum()
-a.dodaj(5, 6)
+a = ListSum([1, 2, 3])
+b = ListSum(["a", "b", "c"])
+
+print a.dodaj(b)
+
+x = SlowSum({1:'a'})
+y = SlowSum({2:'b'})
+
+print x.dodaj(y)
+
+asd = ListSum([5,6,7])
+print asd.dodaj([7,8,9])
